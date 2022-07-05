@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Motocicletas      
+{% endblock %}
+
+
+{% block contenido %}
+<h1>Motocicletas</h1>
+{% for moto in motos %}
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{moto.name}}</h5>
+      <p class="card-text">{{moto.description}}</p>
+      <p class="card-text">{{moto.price}}</p>
+      <a href="#" class="btn btn-primary">Comprar ahora</a>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}

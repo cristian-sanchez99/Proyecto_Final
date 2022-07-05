@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Creacion de productos
+
+{% endblock %}
+
+
+{% block contenido %}
+{% if form %}
+<form action="" method="POST"> 
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+<input type="submit" value="Enviar!">
+</form>
+{% elif new_product %}
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{new_product.name}}</h5>
+      <p class="card-text">{{new_product.description}}</p>
+      <p class="card-text">{{new_product.price}}</p>
+    </div>
+  </div>
+{% endif %}
+{% endblock %}

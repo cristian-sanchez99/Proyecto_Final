@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Camionetas       
+{% endblock %}
+
+
+{% block contenido %}
+<h1>Camionetas</h1>
+{% for camioneta in camionetas %}
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{camioneta.name}}</h5>
+      <p class="card-text">{{camioneta.description}}</p>
+      <p class="card-text">{{camioneta.price}}</p>
+      <a href="#" class="btn btn-primary">Comprar ahora</a>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}

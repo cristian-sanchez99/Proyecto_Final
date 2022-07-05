@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Borrar producto
+
+{% endblock %}
+
+
+{% block contenido %}
+<h3 style = "color: red">Estas por eliminar este producto. Estas sefuro??
+</h3>
+
+<form action = "/automoviles/delete_products/{{product.id}}/"  method="POST">
+    {% csrf_token %} 
+    <button class="btn btn-danger" type="submit">Eliminar</button>
+  </form>
+{% endblock %}

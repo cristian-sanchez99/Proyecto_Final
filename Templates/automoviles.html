@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Automoviles       
+{% endblock %}
+
+
+{% block contenido %}
+<h1>Automoviles</h1>
+
+{{ message }}
+
+{% for auto in autos %}
+<div class="card" style="width: 18rem;">
+    <img src="{{auto.image.url}}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{auto.name}}</h5>
+      <p class="card-text">{{auto.description}}</p>
+      <p class="card-text">{{auto.price}}</p>
+      <a href="/automoviles/detail_product_autos/{{auto.id}}/" class="btn btn-primary">Ver mas</a>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}

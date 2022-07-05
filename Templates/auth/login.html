@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Login
+{% endblock %}
+
+
+{% block contenido %}
+<h3 style = "color: blue">Iniciar sesion
+</h3>
+<h3>{{error}}</h3>
+<form action="" method="POST"> 
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="ingresar">
+</form>
+
+{% endblock %}
